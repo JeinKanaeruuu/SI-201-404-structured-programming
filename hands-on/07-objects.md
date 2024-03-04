@@ -103,20 +103,11 @@ Ada beberapa cara untuk membuat *object*:
 
   **with-object-create.js**
   ```js
-  // Objek pertama dibuat yaitu objek literal ({x: 1, y: 1})
-  // Lalu Object.create() membuat objek baru dari objek literal tersebut
-  // sehingg semua property dalam objek literal tersebut akan di wariskan 
-  // ke o1
-  let o1 = Object.create({x: 1, y: 1}); 
-  console.log(o1);
-
-  // Sama seperti objek o1, namun tidak memiliki property atau method
-  let o2 = Object.create(null);
-  console.log(o2);
-
-  // Sama seperti menggunakan objek literal {} atau new Object()
-  let o3 = Object.create(Object.prototype);
-  console.log(o3);
+let obj1 = {x: 1, y: 1};
+let o1 = Object.create(obj1);
+console.log(o1); // Output: {}
+console.log(o1.x); // Output: 1
+console.log(o1.y); // Output: 1
   ```
 
 
